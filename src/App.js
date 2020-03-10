@@ -1,30 +1,29 @@
-import React from 'react';
-import './App.css';
-import Main from './components/Main';
-import AllInfo from './components/AllInfo';
-import NavBar from "./components/navBar";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import {Provider}  from  "react-redux";
-import store from "./redux/store"
+
+import React, { Component } from 'react';
+import User from "./components/User";
+import "./App.css"
 
 
-function App() {
-  return (
-    <Provider  store={store}  > 
-    <div className="App">
-      <div className="Content">
-        <Router>
-          <NavBar/>
-          <Switch>
-           <Route path="/home" render={()=><h1  >اطلاعات خود را تکمیل نمایید</h1> }/>
-            <Route path="/profile" component={Main} />
-            <Route path="/info" component={AllInfo} />
-          </Switch>
-        </Router>
+class App extends Component {
+
+
+  render() {
+    
+    return (
+
+      <div >
+        <header className="app-git">
+          <h1>react GitHub Project </h1>
+        </header>
+
+        <User />
+
       </div>
-    </div>
-    </Provider>
-  );
+
+
+
+    );
+  }
 }
 
 export default App;
