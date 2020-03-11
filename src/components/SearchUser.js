@@ -30,7 +30,7 @@ class SearchUser extends Component {
             <div>
                 <div className="search-page">
                     <h2>Enter a GitHub username</h2>
-                    <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={this.handleSubmit}gi>
                         <input ref="userInput" className="searchInput" type="text" onChange={this.handleChange} />
                         <button className="searchUser">Search</button>
                     </form>
