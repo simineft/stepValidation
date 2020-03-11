@@ -11,11 +11,9 @@ class User extends React.Component {
             username: "",
             lodaing: false
         };
-        console.log('constructor', Date.now());
+      
     }
-    componentDidMount() {
-        console.log('componentDidMount', Date.now());
-    }
+   
     fetchUser = async username => {
         this.setState({
             lodaing: true
